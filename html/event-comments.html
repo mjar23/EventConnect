@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Comments</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:8000/css/event-comments.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-body">
+           
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column is-2">
+                <!-- Left sidebar -->
+                <aside class="menu" style="padding-left: 0;">
+                    <ul class="menu-list">
+                 
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="column is-10">
+                <div class="event-details-card" id="event-container">
+                    <div class="event-header">
+                        <div class="event-banner">
+                            <h2>Comment Forum</h2>
+                        </div>
+                    </div>
+                    <div class="event-header">
+                        <div class="event-image">
+                            <img id="event-image" src="" alt="Event Image">
+                        </div>
+                        <h2 id="event-name" class="event-title"></h2>
+                        <a href="javascript:history.back()" class="back-button">&lt; Back to Event Details</a>
+
+                    </div>
+                </div>
+
+                <div id="comments-container"></div>
+
+                <div class="comment-form">
+                    <textarea id="comment-input" class="textarea" placeholder="Write a comment..."></textarea>
+                    <button class="button is-primary" onclick="submitComment()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="event-comments.js"></script>
+</body>
+</html>

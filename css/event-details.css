@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-image: url('https://i.ibb.co/598x2vV/EVENT-CONNECT.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    height: 200px;
+    position: relative;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.event-details-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.event-header {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / -1; /* Span the header across the full width */
+}
+
+.event-title {
+    color: #00a1c1c9;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: left; /* Align title to the left */
+}
+
+.event-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.event-image img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.event-content {
+    padding: 20px;
+}
+
+.event-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.detail {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail h3 {
+    color: #00a1c1a4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.detail h3 i {
+    margin-right: 10px;
+}
+
+.detail p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.event-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f8f8f8;
+    grid-column: 1 / -1; /* Span the actions across the full width */
+}
+
+.action-button {
+    background-color: #00a1c1c9;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 -5px;
+    width: calc(33.33% - 10px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button i {
+    margin-right: 10px;
+}
+
+.action-button:hover {
+    background-color: #007d96;
+}
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #00a1c1c9;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
+.map-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #00a1c1c9;
+    text-transform: uppercase;
+    padding: 20px;
+}
+/* Navigation bar */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand img {
+    max-height: 3rem;
+}
+
+.navbar-item {
+    color: #00a1c1c9;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-item:hover {
+    background-color: #f5f5f5;
+}
+
+
+.tweet-box {
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+padding: 20px;
+margin-top: 20px;
+max-height: 500px; /* Set a fixed height for the tweet box */
+overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.tweet-box h3 {
+color: #00a1c1a4;
+font-size: 1.2rem;
+font-weight: bold;
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+position: sticky; /* Make the title sticky */
+top: 0; /* Position the title at the top */
+background-color: #fff; /* Match the background color of the tweet box */
+z-index: 1; /* Ensure the title appears above the tweets */
+padding-bottom: 10px; /* Add some padding at the bottom */
+}
+
+.tweet-box h3 i {
+    margin-right: 10px;
+}
+
+.tweet-card {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.tweet-card:last-child {
+    border-bottom: none;
+}
+
+.tweet-card p {
+    margin: 0;
+}
+
+.tweet-card .tweet-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.tweet-card .tweet-author {
+    font-size: 0.9rem;
+    color: #999;
+}

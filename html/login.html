@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="http://localhost:8000/css/login.css">
+   
+</head>
+<body class="login-page">
+    <div class="login-banner"></div>
+
+    <div id="login-container" class="container">
+        <h2 id="form-title">Login</h2>
+        <form id="user-form">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <div class="error-message" id="username-error"></div>
+            </div>
+            <div id="email-field" style="display: none;">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <div class="error-message" id="email-error"></div>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <div class="error-message" id="password-error"></div>
+            </div>
+            <div id="first-name-field" style="display: none;">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName">
+                <div class="error-message" id="firstName-error"></div>
+            </div>
+            <div id="last-name-field" style="display: none;">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName">
+                <div class="error-message" id="lastName-error"></div>
+            </div>
+            <div id="bio-field" style="display: none;">
+                <label for="bio">Bio:</label>
+                <input type="text" id="bio">
+                <div class="error-message" id="bio-error"></div>
+            </div>
+            <div id="interests-field" style="display: none;">
+                <label for="interests">Interests:</label>
+                <input type="text" id="interests">
+                <div class="error-message" id="interests-error"></div>
+            </div>
+            <div id="location-field" style="display: none;">
+                <label for="location">Location (City, Country):</label>
+                <input type="text" id="location" placeholder="Start typing a location in the UK...">
+                <div class="error-message" id="location-error"></div>
+            </div>
+            <input type="hidden" id="latitude">
+            <input type="hidden" id="longitude">
+            <div id="age-field" style="display: none;">
+                <label for="age">Age:</label>
+                <input type="number" id="age">
+                <div class="error-message" id="age-error"></div>
+            </div>
+            <div id="gender-field" style="display: none;">
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender">
+                <div class="error-message" id="gender-error"></div>
+            </div>
+            <!-- Add the following input fields inside the form -->
+<div id="instagram-username-field" style="display: none;">
+    <label for="instagramUsername">Instagram Username:</label>
+    <input type="text" id="instagramUsername">
+    <div class="error-message" id="instagramUsername-error"></div>
+</div>
+<div id="facebook-username-field" style="display: none;">
+    <label for="facebookUsername">Facebook Username:</label>
+    <input type="text" id="facebookUsername">
+    <div class="error-message" id="facebookUsername-error"></div>
+</div>
+<div id="snapchat-username-field" style="display: none;">
+    <label for="snapchatUsername">Snapchat Username:</label>
+    <input type="text" id="snapchatUsername">
+    <div class="error-message" id="snapchatUsername-error"></div>
+</div>
+            
+            <button type="submit" id="form-submit">Login</button>
+        </form>
+        <p id="message"></p>
+        <div class="toggle-form">
+            <a href="#" id="toggle-form-link">Sign Up</a>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDR_N5soK76D55aICV-bW2jDEOxE5WwVQ&libraries=places"></script>
+    <script src="login.js"></script>
+</body>
+</html>

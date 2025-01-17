@@ -1,0 +1,188 @@
+
+           /* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+                background-color: #f5f5f5;
+            }
+            .container {
+                margin-top: 2rem;
+            }
+            
+
+            .profile-container {
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 6px;
+                box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+            }
+
+            .profile-container h2 {
+                margin-bottom: 1.5rem;
+            }
+
+            .profile-container p {
+                margin-bottom: 0.5rem;
+            }
+
+            .profile-container strong {
+                color: #363636;
+            }
+            .profile-banner {
+                background-image: url('https://i.ibb.co/598x2vV/EVENT-CONNECT.png');
+                background-size: cover;
+                background-position: center;
+                height: 400px;
+                position: relative;
+            }
+
+            .edit-profile-btn {
+                margin-top: 1.5rem;
+            }
+
+            .activity-container {
+                margin-top: 2rem;
+            }
+
+            .activity-container h3 {
+                margin-bottom: 1rem;
+            }
+
+            .activity-container ul {
+                margin-left: 1.5rem;
+            }
+
+            .activity-container li {
+                margin-bottom: 0.5rem;
+            }
+            .custom-bg {
+                background-color: #B2e9f1;
+            }
+            .social-media-links {
+                margin-top: 1rem;
+            }
+
+            .social-media-links ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .social-media-links li {
+                margin-bottom: 0.5rem;
+            }
+
+            .social-media-links a {
+                display: flex;
+                align-items: center;
+                color: #000;
+                text-decoration: none;
+            }
+
+            .social-icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 0.5rem;
+            }
+/* Menu list */
+.menu-list li a {
+    color: #00a1c1c9;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Labels */
+.label {
+    color: #00a1c1a4;
+    font-family: 'Montserrat', sans-serif;
+}
+.button.is-primary {
+    background-color: #00a1c1c9;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+    border: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.button.is-primary:hover {
+    background-color: #007992;
+    border-color: #B2e9f1;
+}
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.event-card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-card-header .event-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 161, 193, 0.8);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.event-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-card-content p {
+    margin-bottom: 1rem;
+}
+
+.event-card-footer {
+    padding: 1rem;
+    text-align: right;
+}
+
+.load-more-btn {
+    display: block;
+    margin: 1.5rem auto 0;
+    background-color: #00a1c1c9;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #007992;
+}

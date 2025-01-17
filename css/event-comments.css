@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('https://i.ibb.co/598x2vV/EVENT-CONNECT.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+.hero-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Event details card */
+.event-details-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    display: flex; /* Change to flex to use flexbox */
+    flex-direction: column; /* Align items vertically */
+}
+
+.event-header {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+
+.event-banner {
+    background-color: #00a1c1c9;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Spread items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.event-title {
+    color: #00a1c1c9;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: left;
+}
+
+.event-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.event-image img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.event-content {
+    padding: 20px;
+}
+
+.event-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+
+.detail {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail h3 {
+    color: #00a1c1a4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.detail h3 i {
+    margin-right: 10px;
+}
+
+.detail p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.back-button:hover {
+    background-color: #e0e0e0;
+    margin: 0; /* Remove bottom margin */
+}
+
+/* Comment */
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 0.5px solid #a0a0a0;
+    border-radius: 5px;
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+/* Comment form */
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form .textarea {
+    border: 1px solid #007d96;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    resize: vertical;
+}
+
+.comment-form .button.is-primary {
+    background-color: #00a1c1c9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form .button.is-primary:hover {
+    background-color: #007992;
+}
+.event-header {
+    display: flex;
+    justify-content: space-between; /* Align items horizontally with space between */
+    align-items: center; /* Center items vertically */
+}
+
+.back-button-container {
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+/* Menu list */
+.menu-list li a {
+    color: #00a1c1c9;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Labels */
+.label {
+    color: #00a1c1a4;
+    font-family: 'Montserrat', sans-serif;
+}

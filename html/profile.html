@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Profile</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="http://localhost:8000/css/profile.css">
+    </head>
+
+    <body>
+        <section class="hero is-small profile-banner">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title"></h1>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="columns">
+                <div class="column is-3">
+                    <aside class="menu" style="padding-left: 0;">
+                        <ul class="menu-list">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/profile.html">Profile</a></li>
+                            <li><a href="/login.html">Log out</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="column is-6">
+                    <div class="activity-container">
+                        <h3 class="title is-5">Connect on Social Media</h3>
+                        <div class="social-media-links">
+                            <script src="https://kit.fontawesome.com/ea8698695c.js" crossorigin="anonymous"></script>
+                            <ul>
+                              <li>
+                                <p><i class="fab fa-square-instagram"></i> <strong>Instagram: @</strong> <span id="instagramUsername"></span></p>
+                              </li>
+                              <li>
+                                <p><i class="fab fa-square-facebook"></i> <strong>Facebook: @</strong> <span id="facebookUsername"></span></p>
+                              </li>
+                              <li>
+                                <p><i class="fab fa-square-snapchat"></i> <strong>Snapchat: @</strong> <span id="snapchatUsername"></span></p>
+                              </li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="profile-container" id="profile-details">
+                        <h2 class="title is-4">Your Profile Details</h2>
+                        <div class="content">
+                            <p><strong>Username:</strong> <span id="username"></span></p>
+                            <p><strong>Email:</strong> <span id="email"></span></p>
+                            <p><strong>First Name:</strong> <span id="firstName"></span></p>
+                            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+                            <p><strong>Bio:</strong> <span id="bio"></span></p>
+                            <p><strong>Interests:</strong> <span id="interests"></span></p>
+                            <p><strong>Location:</strong> <span id="location"></span></p>
+                            <p><strong>Age:</strong> <span id="age"></span></p>
+                            <button class="button is-primary edit-profile-btn" id="edit-profile-btn">Edit Profile</button>
+                        </div>
+                    </div>
+                    <!-- Edit profile form -->
+                    <div class="profile-container" id="edit-profile-form" style="display: none;">
+                        <h2 class="title is-4">Edit Profile</h2>
+                        <div class="content">
+                            <form id="update-profile-form">
+                                <div class="field">
+                                    <label class="label">Username</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="edit-username" required>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control">
+                                        <input class="input" type="email" id="edit-email" required>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">First Name</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="edit-firstName" required>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Last Name</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="edit-lastName" required>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Bio</label>
+                                    <div class="control">
+                                        <textarea class="textarea" id="edit-bio"></textarea>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Interests</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="edit-interests">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Location</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="edit-location">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Instagram</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="edit-instagramUsername">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Facebook</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="edit-facebookUsername">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Snapchat</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="edit-snapchatUsername">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary" type="submit">Save Changes</button>
+                                        <button class="button is-light" type="button" id="cancel-edit-btn">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="activity-container">
+                        <h3 class="title is-5">Events I'm Interested In</h3>
+                        <div class="events-list" id="event-registration-list">
+                            <!-- Event cards will be dynamically generated here -->
+                        </div>
+                        <button class="button is-primary load-more-btn" id="load-more-btn" style="display: none;">Load More</button>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <!-- Right sidebar -->
+                </div>
+            </div>
+        </div>
+        <script src="profile.js"></script>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events Timeline</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="http://localhost:8000/css/Events.css">
+</head>
+<body onload="getEvents()">
+    <section class="hero">
+        <div class="hero-body">
+            <h1 class="title"></h1>
+        </div>
+    </section>
+   <!-- Grey banner for Filter and Map buttons -->
+   
+
+    <div class="container">
+        <div class="columns">
+            <div class="column is-2">
+                <!-- Left sidebar -->
+                <aside class="menu" style="padding-left: 0;">
+                    <ul class="menu-list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/profile.html">Profile</a></li>
+                        <li><a href="/login.html">Log out</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="column is-8">
+                
+                    <!-- Adjusted button container -->
+                    <div class="button-container">
+                        <button id="toggle-filters" class="button is-primary">Search Filters</button>
+                        <button id="toggle-map" class="button is-primary">Map</button>
+                    </div>
+               
+                <div id="filter-container" class="filter-bar">
+                    
+                    <!-- Your filter form here -->
+                    <form id="filterForm" class="filter-form">
+                        <!-- Filter form contents -->
+                        <div class="filter-row">
+                            <div class="filter-item">
+                                <label class="label">Location*(required)</label>
+                                <input class="input" type="text" name="location" placeholder="Enter location or area">
+                            </div>
+                            <div class="filter-item">
+                                <label class="label">Date Range</label>
+                                <div class="filter-item-row">
+                                    <div class="filter-item-col">
+                                        <input class="input" type="date" name="minDate" placeholder="Start Date">
+                                    </div>
+                                    <div class="filter-item-col">
+                                        <input class="input" type="date" name="maxDate" placeholder="End Date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-row">
+                            <div class="filter-item">
+                                <label class="label">Event Type</label>
+                                <div class="select is-multiple">
+                                    <select name="eventcode" multiple>
+                                        <option value="FEST">Festivals</option>
+                                        <option value="LIVE">Live music</option>
+                                        <option value="CLUB">Clubbing/Dance music</option>
+                                        <option value="DATE">Dating event</option>
+                                        <option value="THEATRE">Theatre/Dance</option>
+                                        <option value="COMEDY">Comedy</option>
+                                        <option value="EXHIB">Exhibitions and Attractions</option>
+                                        <option value="KIDS">Kids/Family event</option>
+                                        <option value="BARPUB">Bar/Pub event</option>
+                                        <option value="LGB">Gay/Lesbian event</option>
+                                        <option value="SPORT">Sporting event</option>
+                                        <option value="ARTS">The Arts</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <label class="label">Music Genre</label>
+                                <div class="select is-multiple">
+                                    <select name="genre" multiple>
+                                        <option value="ROCK">Rock</option>
+                                        <option value="POP">Pop</option>
+                                        <option value="HIPHOP">Hip Hop</option>
+                                        <option value="ELECTRONIC">Electronic</option>
+                                        <option value="METAL">Metal</option>
+                                        <option value="INDIE">Indie</option>
+                                        <option value="JAZZ">Jazz</option>
+                                        <option value="BLUES">Blues</option>
+                                        <option value="FOLK">Folk</option>
+                                        <option value="COUNTRY">Country</option>
+                                        <option value="REGGAE">Reggae</option>
+                                        <option value="LATIN">Latin</option>
+                                        <option value="WORLD">World</option>
+                                        <option value="CLASSICAL">Classical</option>
+                                        <option value="OPERA">Opera</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-row">
+                            <div class="filter-item">
+                                <label class="label">Keyword</label>
+                                <input class="input" type="text" name="keyword" placeholder="Enter keyword">
+                            </div>
+                           
+                            
+                            <div class="filter-item">
+                                <button class="button is-primary" type="submit">Apply Filters</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                
+                    <!-- Map container -->
+                   
+                        <div class="column is-12">
+                            <div id="map-container" style="margin-top: 20px;">
+                                <div id="map" style="height: 500px; width: 100%;"></div>
+                            </div>
+                        </div>
+                    
+                
+                <div class="events-grid" id="events-container">
+                    <!-- Events will be rendered here -->
+                </div>
+            </div>
+
+            <div class="column is-2">
+                <!-- Right sidebar -->
+                <!-- Add any content you want here -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/events.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDR_N5soK76D55aICV-bW2jDEOxE5WwVQ&callback=initMap" async defer></script>
+</body>
+</html> 
